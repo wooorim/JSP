@@ -1,6 +1,6 @@
+<!-- 자바 문법을 사용하기위한 선언(스크립트릿 문법) -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!-- 자바 문법을 사용하기위한 선언(스크립트릿 문법) -->
 <!DOCTYPE html>
 <html>
 <head>
