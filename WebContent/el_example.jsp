@@ -1,12 +1,10 @@
 <%-- <%@page import="edu.global.ex.vo.EmpVO"%> --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:useBean id="empVO" class="edu.global.ex.vo.EmpVO"/>
-<jsp:setProperty name="empVO" property="ename" value="홍길동"/>
-<%-- <% 위의 <jsp:useBean><jsp:setProperty>문으로 대치 가능
-	EmpVO vo = new EmpVO(); //객체 생성
-	vo.setEname("홍길동");
-%> --%>
+<jsp:useBean id="empVO" class="edu.global.ex.vo.EmpVO"/> <!-- 같은 기능 : EmpVO vo = new EmpVO(); //객체 생성 -->
+<jsp:setProperty name="empVO" property="ename" value="홍길동"/> <!-- vo.setEname("홍길동"); -->
+
+
  <!-- 객체 생성 방법 (EL문법)-->
 <!DOCTYPE html>
 <html>
@@ -43,6 +41,7 @@
 	${true}<br>
 	
 	${ empVO.ename }<br>
+	${ empVO.getEname() }<br>
 	
 </body>
 </html>

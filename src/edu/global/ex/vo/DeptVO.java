@@ -6,9 +6,10 @@ package edu.global.ex.vo;
 //DNAME           VARCHAR2(14) 
 //LOC             VARCHAR2(13) 
 
-//DTO = VO(Value Object)
+//DTO = VO(Value Object) 데이터베이스와 연동할 떄 자주 사용된다
 //순수하게 데이터를 담아 계층 간으로 전달하는 객체
 //로직을 갖고 있지 않은 순수한 데이터 객체이며 메서드로는 getter/setter 만을 갖는다.
+//getter 메서드는 값을 읽어오는 역할을 하고  setter 메서드는 프로퍼티의 값을 설정하는 역할
 
 public class DeptVO { // 객체화시켜서 메모리에 올린다.
 	private int deptno;
