@@ -26,4 +26,31 @@
     <!--
     <Manager pathname="" />
     -->
+    
+    <Resource 
+
+auth="Container" 
+
+driverClassName="oracle.jdbc.OracleDriver" 
+
+maxIdle="10" 
+
+maxTotal="20" 
+
+maxWaitMillis="-1" 
+
+name="jdbc/oracle" 
+
+password="tiger" 
+
+type="javax.sql.DataSource" 
+
+url="jdbc:oracle:thin:@127.0.0.1:1521:xe" 
+
+username="scott"
+
+/>
+<!-- maxTotal="20" -> connection 객체 수 지정 -->
+<!-- type="javax.sql.DataSource" 커넥션 풀을 대표하는 객체 -->
+<!-- name="jdbc/oracle" 위의 설정의 이름 -->
 </Context>
