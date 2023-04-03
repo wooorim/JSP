@@ -20,6 +20,6 @@ public class BListCommand implements BCommand{
 		List<BoardVO> vos = dao.list();
 		
 		request.setAttribute("boards", vos);
-//		BoardVO에 들어가있는 게시물 정보들를 request객체에 저장
+//		BoardVO에 들어가있는 게시물 정보들을 request객체에 저장
 	}
 }
