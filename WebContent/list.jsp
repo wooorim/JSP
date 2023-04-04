@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+0<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
@@ -21,7 +21,7 @@
          <td>${board.bid}</td>
          <td>${board.bname}</td>
          <td>
-            <c:forEach begin="1" end="${board.bindent}">-</c:forEach>
+            <c:forEach begin="1" end="${board.bindent}">[Re]</c:forEach> <!-- 댓글처리 -->
             <a href="content_view.do?bid=${board.bid}">${board.btitle}</a></td>
          <td>${board.bdate}</td>
          <td>${board.bhit}</td>

@@ -14,6 +14,9 @@ import edu.global.board.command.BContentCommand;
 import edu.global.board.command.BDeleteCommand;
 import edu.global.board.command.BListCommand;
 import edu.global.board.command.BModifyCommand;
+import edu.global.board.command.BReplyCommand;
+import edu.global.board.command.BReplyViewCommand;
+import edu.global.board.command.BWriteCommand;
 
 /**
  * Servlet implementation class BoardController
@@ -81,6 +84,24 @@ public class BoardController extends HttpServlet {
 			System.out.println("/delete.do..");
 			command.execute(request, response);
 			viewPage = "list.do";
+		}else if(com.equals("/write_view.do")) { 
+			System.out.println("/write_view.do..");
+			viewPage = "write_view.jsp"; //입력화면을 뿌려주기만 하는 jsp(View)파일 
+		}else if(com.equals("/write.do")) { //입력한 내용을 DB에 전송(저장)하는 파일
+			System.out.println("/write.do..");
+			command = new BWriteCommand();
+			command.execute(request, response);
+			viewPage = "list.do";
+		}else if(com.equals("/reply_view.do")) { //입력한 내용을 DB에 전송(저장)하는 파일
+			System.out.println("/reply_view.do..");
+			command = new BReplyViewCommand();
+			command.execute(request, response);
+			viewPage = "reply_view.jsp"; //해당 bid찾아가서 내용 가져와야된다.
+		}else if(com.equals("/reply.do")) { //입력한 내용을 DB에 전송(저장)하는 파일
+			System.out.println("/reply.do..");
+			command = new BReplyCommand();
+			command.execute(request, response);
+			viewPage = "list.do"; //해당 bid찾아가서 내용 가져와야된다.
 		}
 		
 		RequestDispatcher dispacher = request.getRequestDispatcher(viewPage);
@@ -89,7 +110,7 @@ public class BoardController extends HttpServlet {
 		//viewPage에 request객체를 fowarding시킨다 -> RequestDispatcher
 	
 		
-//		클라이언트가 list.do로치고 들어오면 DAO를 통해서 request객체안에 게시판 글을 넣는다.
+		//클라이언트가 list.do로치고 들어오면 DAO를 통해서 request객체안에 게시판 글을 넣는다.
 		
 		
 	}
