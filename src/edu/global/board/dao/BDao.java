@@ -226,7 +226,7 @@ public class BDao {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
+		} finally { 
 			try {
 				if (preparedStatement != null)
 					preparedStatement.close();
