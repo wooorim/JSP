@@ -107,6 +107,7 @@ public class BoardController extends HttpServlet {
 		RequestDispatcher dispacher = request.getRequestDispatcher(viewPage);
 		dispacher.forward(request, response);
 		//request객체안에 넣은 게시글 정보의 유효범위가 forward가 끝날 때까지 살아있다.
+		//파파라치는 데이터를 넘겨줄 떄 forwarding를 사용할 수 밖에 없다.
 		//viewPage에 request객체를 fowarding시킨다 -> RequestDispatcher
 	
 		
